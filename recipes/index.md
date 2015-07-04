@@ -1,11 +1,16 @@
 {
   "title": "Recipes",
+  "shortTitle": "recipes",
   "date": "2015-06-26"
 }
 ---
 
-Pick one of the recipes on the left.
+- [cron](cron.html)
+- [logrotate](logrotate.html)
+- [webserver](webserver.html)
 
-Let us know if you'd like to see a recipe we haven't written yet.
+### Need another recipe?
+Please get in touch and let us know.
 
-Do you have a recipe you'd like to share? You can fork <a href="https://github.com/wdtio/wdt-recipes">the cookbook</a> and make a PR.
+### Have a recipe?
+Do you have a recipe you'd like to share with the community? You can fork the [cookbook on Github](https://github.com/wdtio/wdt-recipes) and make a pull request.
