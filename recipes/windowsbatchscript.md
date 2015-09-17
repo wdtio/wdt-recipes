@@ -34,5 +34,4 @@ Now we'll be notified when the job fails and can fix whatever caused the problem
 
 ### More info
 
-- [man page for cron](http://linux.die.net/man/5/crontab)
-- [man page for curl](http://linux.die.net/man/1/curl)
+- [man page for Windows Task Scheduler](http://windows.microsoft.com/en-ca/windows/schedule-task#1TC=windows-7)
