@@ -6,7 +6,7 @@
 ---
 Apache and nginx are two popular webservers. We can use WDT to be notified when they stop responding to HTTP requests.
 
-1. Sign up on WDT.io if you haven't already.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
 2. Create a new outbound timer.
 3. Name the timer after the webserver.
 4. Enter the URL of your webserver including the protocol (http or https).

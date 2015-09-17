@@ -4,16 +4,19 @@
   "date": "2015-06-27"
 }
 ---
-Logrotate is a tool that manages activities like automatic rotation, removal and compression of log files in in Unix-like systems. We can use WDT to be notified when logrotate failed.
+Logrotate is a tool that manages activities like automatic rotation, removal and compression of log files in Unix-like systems. We can use WDT to be notified when logrotate failed.
 
-1. Sign up on WDT.io if you haven't already.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
 2. Create a new inbound timer.
-3. Use a name that reminds you of the log file we want to monitor.
-4. Select a schedule of **every 1 day** and a small precision like **2 minutes**.
-6. Save the new timer.
-7. Copy the URL of this new timer.
-8. Edit the config file for your logfile under `/etc/logrotate.d/'.
-9. Add or extend the postrotate section to send a kick to the URL copied from step 7.
+  1. Provide a name for the timer maybe something that reminds us of the log file we want to monitor.  Forward slashes can be used to provide grouping, for example *production/cron/backup*
+  2. Provide a description.  The description will be included in alert emails.
+  3. Select a schedule (*every*) that mirrors your anticipated log rotation schedule.
+  4. Select a precision (*tolerance*) to account for variations in the time it can take to execute the job.
+  5. Provide an alert email, this is where job notifications will be sent.
+  6. Save the new timer.
+3. Copy the URL of this new timer.
+4. Edit the config file for your logfile under `/etc/logrotate.d/'.
+  1. Add or extend the postrotate section to send a kick to the URL copied from step 3.
 
 Now every time logrotate runs, it'll also send a kick to WDT. This regular kick prevents WDT from sending an alert to you. If, for whatever reason logrotate fails, WDT won't get the kick and will send an alert.
 
