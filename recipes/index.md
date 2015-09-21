@@ -8,6 +8,7 @@
 - [cron](cron.html)
 - [logrotate](logrotate.html)
 - [webserver](webserver.html)
+- [windows batch script](windowsbatchscript.html)
 
 ### Need another recipe?
 Please get in touch and let us know.
