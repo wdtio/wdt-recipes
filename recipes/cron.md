@@ -27,9 +27,9 @@ We have the following cron tab on our database server:
 ```bash
 0 20 * * * /home/oracle/scripts/export_dump.sh
 ```
-Every day at 20:00 the export_dump.sh script is executed. It typically finishes in 4 minutes, but as long as it completes within 10 minutes, we're OK.
+Every day at 20:00 the export_dump.sh script is executed. It typically finishes in under a minute, but as long as it completes in two minutes, we're OK.
 
-So we name our new inbound timer **db/export**, set the schedule to **every 1 day** and the precision to **8 minutes** (10 minutes minus 4 minutes is 6, rounded up to the next available precision which is 8). The URL for this new timer will look something like **k.wdt.io/123abc/db/export**. With that, we edit the crontab using `crontab -e` and change our entry to:
+So we name our new inbound timer **db/export**, set the schedule to **every 1 day** and the precision to **2 minutes**. The URL for this new timer will look something like **k.wdt.io/123abc/db/export**. With that, we edit the crontab using `crontab -e` and change our entry to:
 
 ```bash
 0 20 * * * /home/oracle/scripts/export_dump.sh && curl -s -m 30 http://k.wdt.io/123abc/db/export

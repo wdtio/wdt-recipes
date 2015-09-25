@@ -15,7 +15,7 @@ Windows Task Scheduler is a Windows component that provides the ability to launc
    5. Provide an alert email, this is where job notifications will be sent.
    6. Save the new timer.
 3. Copy the URL of this new timer.
-4. Extend the job to send a kick to the URL copied from step 3.  Note that you will want to have curl installed on and in your path, instructions [here]
+4. Extend the job to send a kick to the URL copied from step 3.  Note that you will want to have curl installed on and in your path.  Here are instructions for installing [curl on windows](windows_curl)
 
 Now every time cron runs your job, it'll also send a kick to WDT. This regular kick prevents WDT from sending an alert to you. If, for whatever reason the job fails, WDT won't get the kick and will send an alert.
 
@@ -23,12 +23,12 @@ Now every time cron runs your job, it'll also send a kick to WDT. This regular k
 ### Example
 
 We have a scheduled task to copy backups from our SQL server to our NAS, it is launched via a batch script.
-Every day at 20:00 the copy-backup.bat script is executed. It typically finishes in 2 minutes, but as long as it completes within 10 minutes, we're OK.
+Every day at 20:00 the copy-backup.bat script is executed. It typically finishes in under a minute, but as long as it completes in two minutes, we're OK.
 
-So we name our new inbound timer **db/copy-backup**, set the schedule to **every 1 day** and the precision to **8 minutes** (10 minutes minus 4 minutes is 6, rounded up to the next available precision which is 8). The URL for this new timer will look something like **k.wdt.io/123abc/db/copy-backup**. With that, we can edit our batch script, for example:
+So we name our new inbound timer **db/copy-backup**, set the schedule to **every 1 day** and the precision to **2 minutes**. The URL for this new timer will look something like **k.wdt.io/123abc/db/copy-backup**. With that, we can edit our batch script, for example:
 
 ```batch
-COPY /Y "c:\DB\bk\*.BAK" \\NAS\backups\DB && C:\curl.exe k.wdt.io/123abc/db/copy-backup
+COPY /Y "C:\DB\bk\*.BAK" \\NAS\backups\DB && C:\curl.exe k.wdt.io/123abc/db/copy-backup
 ```
 Now we'll be notified when the job fails and can fix whatever caused the problem (maybe we ran out of diskspace).
 
