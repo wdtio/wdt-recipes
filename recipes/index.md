@@ -5,10 +5,11 @@
 }
 ---
 
+- [ArangoDB](arangodb.html)
 - [cron](cron.html)
 - [logrotate](logrotate.html)
 - [webserver](webserver.html)
-- [windows batch script](windows_batch_script.html)
+- [Windows batch script](windows_batch_script.html)
 
 ### Need another recipe?
 Please get in touch and let us know.
