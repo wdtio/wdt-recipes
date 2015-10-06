@@ -4,7 +4,7 @@
   "date": "2015-06-27"
 }
 ---
-Logrotate is a tool that manages activities like automatic rotation, removal and compression of log files in Unix-like systems. We can use WDT to be notified when logrotate failed.
+Logrotate is a tool that manages activities like automatic rotation, removal and compression of log files in Unix-like systems. We can use WDT.io to be notified when logrotate failed.
 
 1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
 2. [Create](inbound_timer.html) a new inbound timer.
@@ -12,7 +12,7 @@ Logrotate is a tool that manages activities like automatic rotation, removal and
 4. Edit the config file for your logfile under `/etc/logrotate.d/'.
    1. Add or extend the postrotate section to send a kick to the URL copied from step 3.
 
-Now every time logrotate runs, it'll also send a kick to WDT. This regular kick prevents WDT from sending an alert to you. If, for whatever reason logrotate fails, WDT won't get the kick and will send an alert.
+Now every time logrotate runs, it'll also send a kick to WDT.io. This regular kick prevents WDT.io from sending an alert to you. If, for whatever reason logrotate fails, WDT.io won't get the kick and will send an alert.
 
 
 ### Example

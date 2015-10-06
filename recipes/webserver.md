@@ -4,7 +4,7 @@
   "date": "2015-06-27"
 }
 ---
-Apache and nginx are two popular webservers. We can use WDT to be notified when they stop responding to HTTP requests.
+Apache and nginx are two popular webservers. We can use WDT.io to be notified when they stop responding to HTTP requests.
 
 1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
 2. Create a new outbound timer.
@@ -13,7 +13,7 @@ Apache and nginx are two popular webservers. We can use WDT to be notified when 
 5. Select a short schedule to be notified of problems quickly.
 6. Save the new timer.
 
-Now WDT will send a regular kick to your webserver (an HTTP HEAD request to keep the load low). If the webserver fails to respond, WDT will send an alert.
+Now WDT.io will send a regular kick to your webserver (an HTTP HEAD request to keep the load low). If the webserver fails to respond, WDT.io will send an alert.
 
 
 ### Example
