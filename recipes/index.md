@@ -7,6 +7,7 @@
 
 - [ArangoDB](arangodb.html)
 - [cron](cron.html)
+- [Heroku Scheduler](heroku_scheduler.html)
 - [logrotate](logrotate.html)
 - [webserver](webserver.html)
 - [Windows batch script](windows_batch_script.html)
