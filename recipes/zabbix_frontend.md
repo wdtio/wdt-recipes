@@ -4,7 +4,7 @@
   "date": "2015-11-27"
 }
 ---
-Zabbix is an enterprise-class open source monitoring solution for network and application monitoring.  It provides a web-frontend that displays a wealth of information.
+Zabbix is an enterprise-class open source solution for network and application monitoring.  It provides a web-frontend that displays a wealth of information.
 
 1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
 2. [Create](outbound_timer.html) a new outbound timer
@@ -22,4 +22,4 @@ Now we'll be notified when the zabbix frontend is unavailable
 
 ### More info
 
-- [zabbix home page](http://zabbix.com)
+- [Zabbix home page](http://zabbix.com)
