@@ -11,6 +11,8 @@
 - [logrotate](logrotate.html)
 - [webserver](webserver.html)
 - [Windows batch script](windows_batch_script.html)
+- [Windows PowerShell](powershell.html)
+- [Zabbix frontend](zabbix_frontend.html)
 
 ### Need another recipe?
 Please get in touch and let us know.
