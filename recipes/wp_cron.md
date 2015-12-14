@@ -1,5 +1,5 @@
 {
-  "title": "How to monitor Wordpress and keep wp_cron running",
+  "title": "How to monitor WordPress and keep wp_cron running",
   "shortTitle": "wp_cron",
   "date": "2015-12-11"
 }
