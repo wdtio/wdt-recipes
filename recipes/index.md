@@ -12,6 +12,7 @@
 - [webserver](webserver.html)
 - [Windows batch script](windows_batch_script.html)
 - [Windows PowerShell](powershell.html)
+- [WordPress & wp_cron](wp_cron.html)
 - [Zabbix frontend](zabbix_frontend.html)
 
 ### Need another recipe?
