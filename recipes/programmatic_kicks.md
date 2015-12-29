@@ -23,7 +23,8 @@ using the [http package](https://golang.org/pkg/net/http/#Client.Head)
 ```
 import "net/http"
 
-http.Head("http://<the URL from step 3>")
+client := http.Client{Timeout: time.Duration(30 * time.Second)}    
+client.Head("http://<the URL from step 3>")
 ```
 
 
@@ -37,6 +38,7 @@ import java.net.HttpURLConnection;
 
 HttpURLConnection connection = (HttpURLConnection) new URL("http://<the URL from step 3>").openConnection();
 connection.setRequestMethod("HEAD");
+connection.setConnectTimeout(30000);
 connection.getResponseCode();
 ```
 
@@ -48,7 +50,7 @@ using [Request](https://github.com/request/request)
 ```
 var request = require('request');
 
-request.head('http://<the URL from step 3>');
+request.head('http://<the URL from step 3>', {timeout: 30000});
 ```
 
 or using [Restler](https://github.com/danwrong/restler)
@@ -56,7 +58,7 @@ or using [Restler](https://github.com/danwrong/restler)
 ```
 var rest = require('restler');
 
-rest.head('http://<the URL from step 3>');
+rest.head('http://<the URL from step 3>', {timeout: 30000});
 ```
 
 
@@ -68,6 +70,7 @@ using [cURL](http://php.net/manual/en/ref.curl.php)
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'http://<the URL from step 3>');
 curl_setopt($ch, CURLOPT_NOBODY, true);
+curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 curl_exec($ch);
 curl_close($ch);
 ```
@@ -80,7 +83,7 @@ using [requests](http://docs.python-requests.org/en/latest/user/quickstart/#make
 ```
 import requests
 
-requests.head("http://<the URL from step 3>")
+requests.head("http://<the URL from step 3>", timeout=30)
 ```
 
 
@@ -91,7 +94,7 @@ using [net/http](http://ruby-doc.org/stdlib/libdoc/net/http/rdoc/Net/HTTP.html)
 ```
 require 'net/http'
 
-Net::HTTP.start('k.wdt.io') {|http| http.head('<the path of the URL from step 3>')}
+Net::HTTP.start('k.wdt.io', :open_timeout => 30) {|http| http.head('<the path of the URL from step 3>')}
 ```
 
 or using [curl](http://www.ruby-doc.org/core/Kernel.html#method-i-60)
