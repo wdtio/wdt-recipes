@@ -65,6 +65,32 @@ rest.head('http://<the URL from step 3>', {timeout: 30000});
 ```
 
 
+### Perl
+
+using [HTTP::Request](http://search.cpan.org/~ether/HTTP-Message-6.11/lib/HTTP/Request/Common.pm)
+
+```
+use HTTP::Request::Common;
+use LWP::UserAgent;
+
+my $ua = LWP::UserAgent->new;
+$ua->timeout(30);
+$ua->request(HEAD 'http://<the URL from step 3>');
+```
+
+or using [WWW::Curl::Easy](http://search.cpan.org/~crisb/WWW-Curl-3.02/Easy.pm.in)
+
+```
+use WWW::Curl::Easy;
+
+my $curl = WWW::Curl::Easy->new;
+$curl->setopt(CURLOPT_URL, 'http://<the URL from step 3>');
+$curl->setopt(CURLOPT_NOBODY, 1);
+$curl->setopt(CURLOPT_TIMEOUT, 30);
+$curl->perform;
+```
+
+
 ### PHP
 
 using [cURL](http://php.net/manual/en/ref.curl.php)
