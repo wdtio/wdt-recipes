@@ -4,7 +4,7 @@
   "date": "2016-01-06"
 }
 ---
-CircleCI is a hosted continuous integration service. It integrates with Github such that every time you push a change to Github, CircleCI builds your latest code and runs your tests, notifying you if your build or tests fail.
+CircleCI is a continuous integration service. It integrates with Github such that every time you push a change to Github, CircleCI builds your latest code and runs your tests, notifying you if your build or tests fail.
 
 If your build and tests succeed, CircleCI does not notify you (unless last time it failed). Now if for some reason this integration fails, you will not find out about it until you realize that you pushed something that should have failed but didn't receive any notification.
 
