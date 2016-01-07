@@ -39,7 +39,7 @@ notify:
     - url: k.wdt.io/abc123/awesome_project/circleci?2
 ```
 
-`git add circle.yml` if necessary, and then commit and push it to Github. This will trigger the next build and you can observer on WDT.io how the first kick starts our new tiimer and the second kick stops it.
+`git add circle.yml` if necessary, and then commit and push it to Github. This will trigger the next build and you can observer on WDT.io how the first kick starts our new timer and the second kick stops it.
 
 
 ### More info
