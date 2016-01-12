@@ -8,7 +8,7 @@ CircleCI is a continuous integration service. It integrates with Github such tha
 
 If your build and tests succeed, CircleCI does not notify you (unless last time it failed). Now if for some reason this integration fails, you will not find out about it until you realize that you pushed something that should have failed but didn't receive any notification.
 
-We can use WDT.io to monitor this integration by setting up an on-demand timer which receives it's first kick by a post-push hook from git or Github, and which receives the second kick by a CircleCI webhook.
+We can use WDT.io to monitor this integration by setting up an on-demand timer. The first kick is sent by a post-push hook from git or Github, while the second kick is dispatched by a CircleCI webhook.
 
 1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
 2. [Create](ondemand_timer.html) a new on-demand timer.
@@ -17,7 +17,7 @@ We can use WDT.io to monitor this integration by setting up an on-demand timer w
 3. Copy the Stop-URL of this new timer.
 4. Create or edit a post-build script which kicks the Stop-URL.
 
-Now every time you push a code change, it will also send a kick to WDT.io starting the new timers. When the build (and tests) complete, the second kick is sent ending the timer. If, for whatever reason the second kick doesn't arrive, WDT.io will send you an alert.
+Now every time you push a code change to Github, it will also send a kick to WDT.io starting the new timers. When the build (and tests) complete, the second kick is sent ending the timer. If, for whatever reason the second kick doesn't arrive, WDT.io will send you an alert.
 
 
 ### Example
