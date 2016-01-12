@@ -9,6 +9,7 @@
 - [cron](cron.html)
 - [Heroku Scheduler](heroku_scheduler.html)
 - [logrotate](logrotate.html)
+- [Travis](travis_github.html)
 - [webserver](webserver.html)
 - [Windows batch script](windows_batch_script.html)
 - [Windows PowerShell](powershell.html)
