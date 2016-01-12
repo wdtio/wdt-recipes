@@ -17,7 +17,7 @@ We can use WDT.io to monitor this integration by setting up an on-demand timer w
 3. Copy the Stop-URL of this new timer.
 4. Create or edit a post-build script which kicks the Stop-URL.
 
-Now every time you push a code change, it'll also send a kick to WDT.io starting the new timers. And when the build (and tests) complete, the second kick is sent ending the timer. If, for whatever reason the second kick doesn't arrive, WDT.io will send you an alert.
+Now every time you push a code change, it will also send a kick to WDT.io starting the new timers. When the build (and tests) complete, the second kick is sent ending the timer. If, for whatever reason the second kick doesn't arrive, WDT.io will send you an alert.
 
 
 ### Example
@@ -39,7 +39,7 @@ notify:
     - url: k.wdt.io/abc123/awesome_project/circleci?2
 ```
 
-`git add circle.yml` if necessary, and then commit and push it to Github. This will trigger the next build and you can observer on WDT.io how the first kick starts our new timer and the second kick stops it.
+`git add circle.yml` if necessary, and then commit and push it to Github. This will trigger the next build and you can observe on WDT.io how the first kick starts our new timer and the second kick stops it.
 
 
 ### More info

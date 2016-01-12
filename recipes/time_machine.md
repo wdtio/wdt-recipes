@@ -7,9 +7,9 @@
 
 Time Machine is the built-in backup system of Mac OS X. By default, it runs once every hour. It may stop working if it can't find the designated backup disk, or if that disk is out of space and the deletion of older backups doesn't free up the required amount of disk space. 
 
-We can use WDT.io to monitor Time Machine so that we get notified when it failed to backup. Since Time Machine stops while the computer if off, this recipe makes only sense for allways-on computers.
+We can use WDT.io to monitor Time Machine so that we get notified when it failed to backup. Since Time Machine stops while the computer is off, this recipe is more suitable for always-on computers.
 
-The basic idea is we create a script that checks that the latest backup is not older than an hour. If the result is positive, the script kicks an inbound timer on WDT.io. This timer is configured to expect a kick every hour. And we set up a cron job to run our script every hour. When the inbound timer doesn't get kicked on time, it'll alert.
+The basic idea is that we create a script that checks that the latest backup is not older than an hour. If the result is positive, the script kicks an inbound timer on WDT.io. This timer is configured to expect a kick every hour.  When the inbound timer doesn't get kicked on time, it'll alert.
 
 Keep on reading for a full explanation of how we can accomplish this monitoring, or skip to the end for the final solution.
 
@@ -39,9 +39,9 @@ We can use the `date` command to parse the date-timestamp of that backup, but fi
 DATE_TIMESTAMP=$(basename "$LAST_PATH")
 ```
 
-Now we're able to parse the date-timestamp into an actual date. Recall that our value looks something like `2016-01-03-144156` which is Year-Month-Day-HourMinuteSecond. This format can be parsed with `date -j -f "%Y-%m-%d-%H%M%S"`. The `-j` parameter prevents `date` from changing the current date on your computer.
+Now we're able to parse the date-timestamp into an actual date. Recall that our timestamp value looks something like `2016-01-03-144156` which is Year-Month-Day-HourMinuteSecond. This format can be parsed with `date -j -f "%Y-%m-%d-%H%M%S"`. The `-j` parameter prevents `date` from changing the current date on your computer.
 
-There is no functionality built into `date` for getting the age of a date which is what we're really interested in (to test if the latest backup is no older than an hour). But there is a way to get the number of seconds since epoch (January 1st, 1970) with `date "+%s"`. So we'll get the number of seconds for our date-timestamp, and also the number of seconds for now, then we substract these two numbers which gives us the age of the date-timestamp in seconds.
+There is no functionality built into `date` for getting the age of a date which is what we're really interested in (to test if the latest backup is no older than an hour). But there is a way to get the number of seconds since epoch (January 1st, 1970) with `date "+%s"`. So we'll get the number of seconds for our date-timestamp, and also the number of seconds for now, then we find the different between these two numbers which gives us the age of the date-timestamp in seconds.
 
 ```
 DATE_TIMESTAMP_SECONDS=$(date -j -f "%Y-%m-%d-%H%M%S" $DATE_TIMESTAMP "+%s")
@@ -74,7 +74,7 @@ Putting it all together into a one-liner.
 (($(date "+%s") - $(basename "$(tmutil latestbackup)" | xargs date -j -f "%Y-%m-%d-%H%M%S" "+%s") < 3600)) && curl -Im 30 http://k.wdt.io/your/timer
 ```
 
-We intend to use this line in cron where the percentage character has a special meaning, so we need to escape ours.
+We intend to use this line in our crontab where the percentage character has a special meaning, so we need to escape ours.
 
 ```
 (($(date "+\%s") - $(basename "$(tmutil latestbackup)" | xargs date -j -f "\%Y-\%m-\%d-\%H\%M\%S" "+\%s") < 3600)) && curl -Im 30 http://k.wdt.io/your/timer
