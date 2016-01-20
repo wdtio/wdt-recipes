@@ -5,16 +5,17 @@
 }
 ---
 
-- [ArangoDB](arangodb.html)
-- [cron](cron.html)
-- [Heroku Scheduler](heroku_scheduler.html)
-- [logrotate](logrotate.html)
-- [Travis](travis_github.html)
-- [webserver](webserver.html)
-- [Windows batch script](windows_batch_script.html)
-- [Windows PowerShell](powershell.html)
-- [WordPress & wp_cron](wp_cron.html)
-- [Zabbix frontend](zabbix_frontend.html)
+- [How to monitor ArangoDB](arangodb.html)
+- [How to monitor cron jobs](cron.html)
+- [How to monitor Heroku Scheduler](heroku_scheduler.html)
+- [How to monitor logrotate](logrotate.html)
+- [How to monitor Travis](travis_github.html)
+- [How to monitor webservers](webserver.html)
+- [How to monitor Windows batch script](windows_batch_script.html)
+- [How to monitor Windows PowerShell](powershell.html)
+- [How to monitor WordPress & wp_cron](wp_cron.html)
+- [How to monitor your own programs](programmatic_kicks.html)
+- [How to monitor Zabbix frontends](zabbix_frontend.html)
 
 ### Need another recipe?
 Please get in touch and let us know.
