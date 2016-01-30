@@ -1,6 +1,6 @@
 {
   "title": "How to monitor CircleCI",
-  "shortTitle": "circleci",
+  "shortTitle": "Monitoring CircleCI",
   "date": "2016-01-06"
 }
 ---

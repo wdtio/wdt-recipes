@@ -1,6 +1,6 @@
 {
   "title": "How to monitor Time Machine",
-  "shortTitle": "time machine",
+  "shortTitle": "Monitoring Time Machine",
   "date": "2016-01-03"
 }
 ---

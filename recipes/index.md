@@ -1,6 +1,6 @@
 {
   "title": "Recipes",
-  "shortTitle": "recipes",
+  "shortTitle": "Monitoring everything",
   "date": "2015-06-26"
 }
 ---

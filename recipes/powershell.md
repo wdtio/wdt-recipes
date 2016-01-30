@@ -1,6 +1,6 @@
 {
   "title": "How to monitor Windows PowerShell Scripts",
-  "shortTitle": "powershell",
+  "shortTitle": "Monitoring PowerShell",
   "date": "2015-11-27"
 }
 ---

@@ -1,6 +1,6 @@
 {
   "title": "How to monitor cron jobs",
-  "shortTitle": "cron",
+  "shortTitle": "Monitoring cron",
   "date": "2015-06-26"
 }
 ---

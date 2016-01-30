@@ -1,6 +1,6 @@
 {
   "title": "How to monitor Wordpress and control wp_cron externally",
-  "shortTitle": "wp_cron_manual",
+  "shortTitle": "Monitoring wp_cron manually",
   "date": "2015-12-11"
 }
 ---

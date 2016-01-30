@@ -1,6 +1,6 @@
 {
   "title": "How to monitor Windows task scheduler batch scripts",
-  "shortTitle": "wintask",
+  "shortTitle": "Monitoring wintask",
   "date": "2015-09-17"
 }
 ---

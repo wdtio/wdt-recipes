@@ -1,6 +1,6 @@
 {
   "title": "How to monitor logrotate",
-  "shortTitle": "logrotate",
+  "shortTitle": "Monitoring logrotate",
   "date": "2015-06-27"
 }
 ---

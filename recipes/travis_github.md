@@ -1,6 +1,6 @@
 {
   "title": "How to monitor Travis",
-  "shortTitle": "travis",
+  "shortTitle": "Monitoring Travis",
   "date": "2016-01-06"
 }
 ---

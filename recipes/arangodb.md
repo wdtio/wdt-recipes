@@ -1,6 +1,6 @@
 {
   "title": "How to monitor ArangoDB",
-  "shortTitle": "ArangoDB",
+  "shortTitle": "Monitoring ArangoDB",
   "date": "2015-09-24"
 }
 ---

@@ -1,6 +1,6 @@
 {
   "title": "How to monitor a webserver",
-  "shortTitle": "webserver",
+  "shortTitle": "Monitoring web servers",
   "date": "2015-06-27"
 }
 ---

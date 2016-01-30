@@ -1,6 +1,6 @@
 {
   "title": "How to monitor Heroku Scheduler jobs",
-  "shortTitle": "Heroku scheduler",
+  "shortTitle": "Monitoring Heroku scheduler",
   "date": "2015-11-06"
 }
 ---

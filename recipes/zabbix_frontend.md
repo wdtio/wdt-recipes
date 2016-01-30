@@ -1,6 +1,6 @@
 {
   "title": "How to monitor Zabbix frontend",
-  "shortTitle": "zabbix-web",
+  "shortTitle": "Monitoring zabbix-web",
   "date": "2015-11-27"
 }
 ---

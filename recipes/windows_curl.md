@@ -1,6 +1,6 @@
 {
   "title": "How to install curl on Windows",
-  "shortTitle": "curlwindows",
+  "shortTitle": "Monitoring curlwindows",
   "date": "2015-09-25"
 }
 ---

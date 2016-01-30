@@ -1,6 +1,6 @@
 {
   "title": "How to send kicks to WDT.io programmatically",
-  "shortTitle": "programmatic kicks",
+  "shortTitle": "Monitoring custom programs",
   "date": "2015-12-27"
 }
 ---
