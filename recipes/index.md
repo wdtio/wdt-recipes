@@ -9,6 +9,7 @@
 - [How to monitor cron jobs](cron.html)
 - [How to monitor Heroku Scheduler](heroku_scheduler.html)
 - [How to monitor logrotate](logrotate.html)
+- [How to monitor Time Machine](time_machine.html)
 - [How to monitor Travis](travis_github.html)
 - [How to monitor webservers](webserver.html)
 - [How to monitor Windows batch script](windows_batch_script.html)
