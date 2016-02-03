@@ -49,7 +49,7 @@ So we name our new inbound timer **www/logrotate/nginx**, set the schedule to **
         create 640 nginx adm
         sharedscripts
         postrotate
-                [ -f /var/run/nginx.pid ] && kill -USR1 `cat /var/run/nginx.pid` && curl -s -m 30 http://k.wdt.io/123abc/www/logrotate/nginx
+                [ -f /var/run/nginx.pid ] && kill -USR1 `cat /var/run/nginx.pid` && curl -sm 30 k.wdt.io/123abc/www/logrotate/nginx
         endscript
 ```
 Now we'll be notified when the rotation fails and can fix whatever caused the problem.

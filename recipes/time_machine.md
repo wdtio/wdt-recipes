@@ -54,7 +54,7 @@ CURRENT_SECONDS=$(date "+%s")
 For one hour we have 60 seconds times 60 minutes wich makes 3600, so if our age is not greater than that, we'll know that the latest backup is recent and assume Time Machine is still working and send a kick to WDT.io. The `curl` command is convenient for sending kicks.
 
 ```
-(($CURRENT_SECONDS - $DATE_TIMESTAMP_SECONDS < 3600)) && curl -Im 30 http://k.wdt.io/your/timer
+(($CURRENT_SECONDS - $DATE_TIMESTAMP_SECONDS < 3600)) && curl -sm 30 k.wdt.io/your/timer
 ```
 
 
@@ -65,19 +65,19 @@ LAST_PATH=$(tmutil latestbackup)
 DATE_TIMESTAMP=$(basename "$LAST_PATH")
 DATE_TIMESTAMP_SECONDS=$(date -j -f "%Y-%m-%d-%H%M%S" $DATE_TIMESTAMP "+%s")
 CURRENT_SECONDS=$(date "+%s")
-(($CURRENT_SECONDS - $DATE_TIMESTAMP_SECONDS < 3600)) && curl -Im 30 http://k.wdt.io/your/timer
+(($CURRENT_SECONDS - $DATE_TIMESTAMP_SECONDS < 3600)) && curl -sm 30 k.wdt.io/your/timer
 ```
 
 Putting it all together into a one-liner.
 
 ```
-(($(date "+%s") - $(basename "$(tmutil latestbackup)" | xargs date -j -f "%Y-%m-%d-%H%M%S" "+%s") < 3600)) && curl -Im 30 http://k.wdt.io/your/timer
+(($(date "+%s") - $(basename "$(tmutil latestbackup)" | xargs date -j -f "%Y-%m-%d-%H%M%S" "+%s") < 3600)) && curl -sm 30 k.wdt.io/your/timer
 ```
 
 We intend to use this line in our crontab where the percentage character has a special meaning, so we need to escape ours.
 
 ```
-(($(date "+\%s") - $(basename "$(tmutil latestbackup)" | xargs date -j -f "\%Y-\%m-\%d-\%H\%M\%S" "+\%s") < 3600)) && curl -Im 30 http://k.wdt.io/your/timer
+(($(date "+\%s") - $(basename "$(tmutil latestbackup)" | xargs date -j -f "\%Y-\%m-\%d-\%H\%M\%S" "+\%s") < 3600)) && curl -sm 30 k.wdt.io/your/timer
 ```
 
 
@@ -105,7 +105,7 @@ To account for this extra time, we'll allow backups to take up to 30 minutes. Wi
 4. Use `crontab -e` to add a new cronjob (if you needed `sudo` to run `tmutil` above, use `sudo crontab -e` to create a cronjob for root):
 
 ```
-0 * * * * (($(date "+\%s") - $(basename "$(tmutil latestbackup)" | xargs date -j -f "\%Y-\%m-\%d-\%H\%M\%S" "+\%s") < 5400)) && curl -Im 30 http://<the URL from step 3>
+0 * * * * (($(date "+\%s") - $(basename "$(tmutil latestbackup)" | xargs date -j -f "\%Y-\%m-\%d-\%H\%M\%S" "+\%s") < 5400)) && curl -sm 30 <the URL from step 3>
 ```
 
 This cronjob will run every hour and send a kick to your timer at WDT.io as long as the latest backup is recent enough. If it's not, there will be no kick and WDT.io will send you an alert so you can investigate why Time Machine stopped backing up for you.

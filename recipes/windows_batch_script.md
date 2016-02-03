@@ -22,7 +22,7 @@ Every day at 20:00 the copy-backup.bat script is executed. It typically finishes
 So we name our new inbound timer **db/copy-backup**, set the schedule to **every 1 day** and the precision to **2 minutes**. The URL for this new timer will look something like **k.wdt.io/123abc/db/copy-backup**. With that, we can edit our batch script, for example:
 
 ```batch
-COPY /Y "C:\DB\bk\*.BAK" \\NAS\backups\DB && C:\curl.exe k.wdt.io/123abc/db/copy-backup
+COPY /Y "C:\DB\bk\*.BAK" \\NAS\backups\DB && C:\curl.exe -sm 30 k.wdt.io/123abc/db/copy-backup
 ```
 Now we'll be notified when the job fails and can fix whatever caused the problem (maybe we ran out of diskspace).
 

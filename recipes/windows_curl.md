@@ -11,7 +11,7 @@ curl is an open source command line tool and library for transferring data with 
 3. Test curl
 
 ```batch
-c:\curl.exe http://google.com
+c:\curl.exe google.com
 ``` 
 
 Now you are ready to [sign up](https://wdt.io/signup) and create a new inbound timer on your windows machine.

@@ -26,7 +26,7 @@ The frequency is "Every 10 minutes" which means that Heroku Scheduler runs the c
 So we name our new inbound timer **heroku/cleanup**, set the schedule to **every 10 minutes** and the precision to **2 minutes**. The URL for this new timer will look something like **k.wdt.io/123abc/heroku/cleanup**. With that, we edit the job on the [Heroku Scheduler dashboard](https://scheduler.heroku.com/dashboard) click on Edit and change our job to:
 
 ```bash
-node cleanup.js && curl -s -m 30 http://k.wdt.io/123abc/heroku/cleanup
+node cleanup.js && curl -sm 30 k.wdt.io/123abc/heroku/cleanup
 ```
 Now we'll be notified when the job fails and can fix whatever caused the problem (maybe we have a syntax error in cleanup.js).
 

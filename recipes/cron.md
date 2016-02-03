@@ -26,7 +26,7 @@ Every day at 20:00 the export_dump.sh script is executed. It typically finishes 
 So we name our new inbound timer **db/export**, set the schedule to **every 1 day** and the precision to **2 minutes**. The URL for this new timer will look something like **k.wdt.io/123abc/db/export**. With that, we edit the crontab using `crontab -e` and change our entry to:
 
 ```bash
-0 20 * * * /home/oracle/scripts/export_dump.sh && curl -s -m 30 http://k.wdt.io/123abc/db/export
+0 20 * * * /home/oracle/scripts/export_dump.sh && curl -sm 30 k.wdt.io/123abc/db/export
 ```
 Now we'll be notified when the job fails and can fix whatever caused the problem (maybe we ran out of diskspace).
 

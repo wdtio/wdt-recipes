@@ -38,7 +38,6 @@ import java.net.HttpURLConnection;
 import java.io.IOException;
 
 HttpURLConnection connection = (HttpURLConnection) new URL("http://<the URL from step 3>").openConnection();
-connection.setRequestMethod("HEAD");
 connection.setConnectTimeout(30000);
 try {
   connection.getResponseCode();
@@ -85,7 +84,6 @@ use WWW::Curl::Easy;
 
 my $curl = WWW::Curl::Easy->new;
 $curl->setopt(CURLOPT_URL, 'http://<the URL from step 3>');
-$curl->setopt(CURLOPT_NOBODY, 1);
 $curl->setopt(CURLOPT_TIMEOUT, 30);
 $curl->perform;
 ```
@@ -98,7 +96,6 @@ using [cURL](http://php.net/manual/en/ref.curl.php)
 ```
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'http://<the URL from step 3>');
-curl_setopt($ch, CURLOPT_NOBODY, true);
 curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 curl_exec($ch);
 curl_close($ch);
@@ -132,5 +129,5 @@ Net::HTTP.start('k.wdt.io', :open_timeout => 30) {|http| http.head('<the path of
 or using [curl](http://www.ruby-doc.org/core/Kernel.html#method-i-60)
 
 ```
-`curl -Ism 30 http://<the URL from step 3>`
+`curl -sm 30 <the URL from step 3>`
 ```

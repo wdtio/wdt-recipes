@@ -37,7 +37,7 @@ Once a day, after the site is visited and wp_cron.php is invoked, the backup wil
 So we create a new inbound timer **wp/wp_cron_kicker**, set the schedule to **every 5 minutes** and the precision to **2 minutes**.  The URL for this new timer will look something like **k.wdt.io/123abc/wp/wp_cron_kicker**.  With that, we edit the crontab using `crontab -e` and change our entry to: 
 
 ```bash
-*/5 * * * *    wget -O- -q -t 1 http://www.server.com/wp-cron.php?doing_wp_cron=1 > /dev/null 2>&1 && curl -s -m 30 http://k.wdt.io/123abc/
+*/5 * * * *    wget -O- -q -t 1 http://www.server.com/wp-cron.php?doing_wp_cron=1 > /dev/null 2>&1 && curl -sm 30 k.wdt.io/123abc/
 ```
 
 Now we'll be notified when the wp_cron does not completely sucessfully and in a timely manner.
