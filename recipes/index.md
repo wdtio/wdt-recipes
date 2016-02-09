@@ -6,6 +6,7 @@
 ---
 
 - [How to monitor ArangoDB](arangodb.html)
+- [How to monitor CircleCI](circleci_github.html)
 - [How to monitor cron jobs](cron.html)
 - [How to monitor Heroku Scheduler](heroku_scheduler.html)
 - [How to monitor logrotate](logrotate.html)
