@@ -4,7 +4,7 @@
   "date": "2016-02-29"
 }
 ---
-In OS X, you can run a background job on a timed schedule using launchd ("Launch Daemon"). We can use WDT.io to be notified when a scheduled job failed.
+In OS X, you can run a background job on a timed schedule using launchd ("Launch Daemon"). We can use WDT.io to be notified when a scheduled job fails or does not run.
 
 1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
 2. [Create](inbound_timer.html) a new inbound timer.
