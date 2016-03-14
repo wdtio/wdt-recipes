@@ -23,27 +23,28 @@ We have the following /etc/anacrontab on our development laptop that backs up lo
 SHELL=/bin/sh
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
-RANDOM_DELAY=10
+RANDOM_DELAY=20
 START_HOURS_RANGE=12-13
 
-7       10      backup             /home/lester/backup.sh
+7       25      backup             /home/lester/backup.sh
 ```
 
-Every 7 days, starting 10 minutes past the START_HOUR_RANGE with a RANDOM_DELAY of up to 10 minutes, the job will launch.  It takes roughly 10 minutes to run.
+Every 7 days, starting up to 15 minutes past the START_HOUR_RANGE with a RANDOM_DELAY of up to 20 minutes, the job will launch.  It takes roughly 10 minutes to run.
 
-So we name our new inbound timer **backupdb**, set the schedule to **every 7 day** and the precision to **30 minutes**, which is RANDOM_DELAY + DELAY + time to run. The URL for this new timer will look something like **k.wdt.io/123abc/backupdb**. With that, we edit /etc/anacrontab and change it to:
+So we name our new inbound timer **backupdb**, set the schedule to **every 7 day** and the precision to **45 minutes**, which is RANDOM_DELAY + DELAY + time to run. The URL for this new timer will look something like **k.wdt.io/123abc/backupdb**. With that, we edit /etc/anacrontab and change it to:
 
 ```bash
 SHELL=/bin/sh
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
-RANDOM_DELAY=45
-START_HOURS_RANGE=3-22
+RANDOM_DELAY=20
+START_HOURS_RANGE=12-13
 
 7       25      backup             /home/lester/backup.sh && curl -sm 30 k.wdt.io/123abc/backupdb
 ```
 
 Now we'll be notified when the job fails or fails to run and can fix whatever caused the problem (maybe our laptop has been turned off for a long period of time or is not connected to the network).
+Of course, if this is a non-critical anacron job, and your concern is that the job runs periodically, say a daily job you'd like it to run at least once weekly, you might want to set your schedule to **every 1 day** and the precision to **3000 minutes**.
 
 ### More info
 
