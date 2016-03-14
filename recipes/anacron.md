@@ -26,7 +26,7 @@ MAILTO=root
 RANDOM_DELAY=20
 START_HOURS_RANGE=12-13
 
-7       25      backup             /home/lester/backup.sh
+7       15      backup             /home/lester/backup.sh
 ```
 
 Every 7 days, starting up to 15 minutes past the START_HOUR_RANGE with a RANDOM_DELAY of up to 20 minutes, the job will launch.  It takes roughly 10 minutes to run.
@@ -40,7 +40,7 @@ MAILTO=root
 RANDOM_DELAY=20
 START_HOURS_RANGE=12-13
 
-7       25      backup             /home/lester/backup.sh && curl -sm 30 k.wdt.io/123abc/backupdb
+7       15      backup             /home/lester/backup.sh && curl -sm 30 k.wdt.io/123abc/backupdb
 ```
 
 Now we'll be notified when the job fails or fails to run and can fix whatever caused the problem (maybe our laptop has been turned off for a long period of time or is not connected to the network).
