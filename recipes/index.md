@@ -12,6 +12,7 @@
 - [How to monitor cron jobs created with Puppet](puppet.html)
 - [How to monitor disk space](disk_space.html)
 - [How to monitor Heroku Scheduler](heroku_scheduler.html)
+- [How to monitor IronMQ, IronWorker, and IronCache](iron_io.html)
 - [How to monitor launchd](launchd.html)
 - [How to monitor logrotate](logrotate.html)
 - [How to monitor Node Schedule](node_schedule.html)
