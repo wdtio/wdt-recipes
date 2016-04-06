@@ -7,6 +7,7 @@
 
 - [How to monitor anacron jobs](anacron.html)
 - [How to monitor ArangoDB](arangodb.html)
+- [How to monitor AutoSys jobs](autosys.html)
 - [How to monitor CircleCI](circleci_github.html)
 - [How to monitor cron jobs](cron.html)
 - [How to monitor cron jobs created with Puppet](puppet.html)
