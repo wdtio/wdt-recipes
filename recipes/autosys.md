@@ -46,7 +46,7 @@ start_times:"22:00"
 term_run_time:600
 ```
 
-Now we'll be notified when the job fails or fails to run and we can fix whatever caused the problem (maybe the backup job now takes longer than 10 minutes to run, someone has forgetten to delete their temporary dataset).
+Now we'll be notified when the job fails or fails to run and we can fix whatever caused the problem (maybe the backup job now takes longer than 10 minutes to run, or someone has forgotten to delete their temporary dataset).
 
 ### More info
 
