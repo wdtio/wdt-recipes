@@ -5,6 +5,7 @@
 }
 ---
 
+- [How to monitor Agenda jobs](agenda.html)
 - [How to monitor anacron jobs](anacron.html)
 - [How to monitor ArangoDB](arangodb.html)
 - [How to monitor AutoSys jobs](autosys.html)

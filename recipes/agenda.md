@@ -11,12 +11,12 @@ Agenda is a light-weight job scheduling library for Node.js. We can use WDT.io t
 3. Copy the URL of this new timer.
 4. Extend the job to send a kick to the URL copied from step 3.
 
-Now every time Node Schedule runs your job, it'll also send a kick to WDT.io. This regular kick prevents WDT.io from sending an alert to you. If, for whatever reason the job fails, WDT.io won't get the kick and will send an alert.
+Now every time Agenda runs your job, it'll also send a kick to WDT.io. This regular kick prevents WDT.io from sending an alert to you. If, for whatever reason the job fails, WDT.io won't get the kick and will send an alert.
 
 
 ### Example
 
-We have a node application "user-manager" with the follwing JavaScript code:
+We have a node application "user-manager" with the following JavaScript code:
 
 ```JavaScript
 var Agenda = require('agenda');
