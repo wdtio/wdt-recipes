@@ -99,9 +99,9 @@ To account for this extra time, we'll allow backups to take up to 30 minutes. Wi
 
 ### Setting everything up
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
-2. [Create](inbound_timer.html) a new inbound timer "TimeMachine", every 1 hour, tolerance of 4 minutes.
-3. Copy the URL of this new timer.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
+2. [Create](inbound_timer.html) a new inbound timer "TimeMachine", every 1 hour, tolerance of 4 minutes
+3. Copy the URL of this new timer
 4. Use `crontab -e` to add a new cronjob (if you needed `sudo` to run `tmutil` above, use `sudo crontab -e` to create a cronjob for root):
 
 ```

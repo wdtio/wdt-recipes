@@ -6,9 +6,9 @@
 ---
 Zabbix is an enterprise-class open source solution for network and application monitoring.  It provides a web-frontend that displays a wealth of information.
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
 2. [Create](outbound_timer.html) a new outbound timer
-3. In the URL field, paste the URL of your zabbix frontend, specify a frequency and alert email.
+3. In the URL field, paste the URL of your zabbix frontend, specify a frequency and alert email
 
 Now, WDT will send an outbound kick and dispatch an alert when the Zabbix-frontend is unreachable.
 

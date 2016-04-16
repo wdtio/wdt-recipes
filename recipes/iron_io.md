@@ -8,13 +8,13 @@ Iron.io offers a commercial workload management solution comprised of a message 
 
 ### IronMQ
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
-2. Create a new outbound timer.
-3. Name the timer after the project and queue.
-4. Use the REST endpoint for getting info about your queue as the URL of the new timer.
-5. Select GET.
-6. Select every 1 minute as the schedule.
-7. Save the new timer.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
+2. Create a new outbound timer
+3. Name the timer after the project and queue
+4. Use the REST endpoint for getting info about your queue as the URL of the new timer
+5. Select GET
+6. Select every 1 minute as the schedule
+7. Save the new timer
 
 A quick way to figure out the REST endpoint URL is to copy and change the webhook URL from the iron.io UI. For example, if the project name on iron.io is "homework" and the name of the queue is "task-queue", the webhook URL will look something like https://mq-aws-eu-west-1-1.iron.io/3/projects/123/queues/task-queue/webhook?oauth=4a5b6c. So we can name the outbound watchdog timer **homework/task-queue** and use **https://mq-aws-eu-west-1-1.iron.io/3/projects/123/queues/task-queue?oauth=4a5b6c** as URI.
 
@@ -26,13 +26,13 @@ Workers are simply programs, so we extend our worker program to kick an inbound 
 
 ### IronCache
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
-2. Create a new outbound timer.
-3. Name the timer after the project and cache.
-4. Use the REST endpoint for getting info about your cache as the URL of the new timer.
-5. Select GET.
-6. Select every 1 minute as the schedule.
-7. Save the new timer.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
+2. Create a new outbound timer
+3. Name the timer after the project and cache
+4. Use the REST endpoint for getting info about your cache as the URL of the new timer
+5. Select GET
+6. Select every 1 minute as the schedule
+7. Save the new timer
 
 For example, if the project name on iron.io is "homework" and the name of the cache is "submitted_cache", the endpoint URL will look something like **https://cache-aws-us-east-1.iron.io/1/projects/123/caches/submitted_cache?oauth=4a5b6c**. So we can name the outbound watchdog timer **homework/submitted_cache**.
 

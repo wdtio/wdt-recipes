@@ -6,10 +6,10 @@
 ---
 Windows PowerShell is a task automation and configuration management framework from Microsoft built on .NET framework.  It provides a variety of tools for facilitating machine management.
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
 2. [Create](inbound_timer.html) a new inbound timer
-3. Copy the URL of this new timer.
-4. Extend the job to send a kick to the URL copied from step 3.
+3. Copy the URL of this new timer
+4. Extend the job to send a kick to the URL copied from step 3
 
 Now every time the script is run, WDT should receive an inbound kick and dispatch an alert when the kick is not received.
 

@@ -7,7 +7,7 @@
 curl is an open source command line tool and library for transferring data with URL syntax.  We can use curl to send inbound kicks to WDT.io to be notified when a job failed.
 
 1. Download the curl executable using the [curl Download Wizard](http://curl.haxx.se/dlwiz/?type=bin)
-2. Unzip the package to a local directory on the system you wish to monitor.
+2. Unzip the package to a local directory on the system you wish to monitor
 3. Test curl
 
 ```batch

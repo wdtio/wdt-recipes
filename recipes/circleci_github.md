@@ -10,12 +10,12 @@ If your build and tests succeed, CircleCI does not notify you (unless last time 
 
 We can use WDT.io to monitor this integration by setting up an on-demand timer. The first kick is sent by a post-push hook from git or Github, while the second kick is dispatched by a CircleCI webhook.
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
-2. [Create](ondemand_timer.html) a new on-demand timer.
-3. Copy the Start-URL of this new timer.
-4. Create or edit a post-push script which kicks the Start-URL.
-3. Copy the Stop-URL of this new timer.
-4. Create or edit a post-build script which kicks the Stop-URL.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
+2. [Create](ondemand_timer.html) a new on-demand timer
+3. Copy the Start-URL of this new timer
+4. Create or edit a post-push script which kicks the Start-URL
+3. Copy the Stop-URL of this new timer
+4. Create or edit a post-build script which kicks the Stop-URL
 
 Now every time you push a code change to Github, it will also send a kick to WDT.io starting the new timers. When the build (and tests) complete, the second kick is sent ending the timer. If, for whatever reason the second kick doesn't arrive, WDT.io will send you an alert.
 

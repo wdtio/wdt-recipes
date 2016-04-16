@@ -6,10 +6,12 @@
 ---
 Windows Task Scheduler is a Windows component that provides the ability to launch scripts or programs on a defined scheduled. We can use WDT.io to be notified when a job failed.
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
-2. [Create](inbound_timer.html) a new inbound timer.
-3. Copy the URL of this new timer.
-4. Extend the job to send a kick to the URL copied from step 3.  Note that you will want to have curl installed on and in your path.  Here are instructions for installing [curl on windows](windows_curl.html)
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
+2. [Create](inbound_timer.html) a new inbound timer
+3. Copy the URL of this new timer
+4. Extend the job to send a kick to the URL copied from step 3
+
+Note that you will want to have curl installed on and in your path. Here are instructions for installing [curl on windows](windows_curl.html)
 
 Now every time cron runs your job, it'll also send a kick to WDT.io. This regular kick prevents WDT.io from sending an alert to you. If, for whatever reason the job fails, WDT.io won't get the kick and will send an alert.
 

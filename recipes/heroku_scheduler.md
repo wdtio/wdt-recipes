@@ -6,10 +6,10 @@
 ---
 Heroku is a PaaS supporting several stacks. Heroku Scheduler is an add-on for running jobs on Heroku at scheduled time intervals, similar to cron. We can use WDT.io to be notified when a Heroku Scheduler job failed.
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
-2. [Create](inbound_timer.html) a new inbound timer.
-3. Copy the URL of this new timer.
-4. Extend the job to send a kick to the URL copied from step 3.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
+2. [Create](inbound_timer.html) a new inbound timer
+3. Copy the URL of this new timer
+4. Extend the job to send a kick to the URL copied from step 3
 
 Now every time Heroku Scheduler runs your job, it'll also send a kick to WDT.io. This regular kick prevents WDT.io from sending an alert to you. If, for whatever reason the job fails, WDT.io won't get the kick and will send an alert.
 

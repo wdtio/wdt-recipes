@@ -8,10 +8,10 @@ Or *how to make HTTP HEAD requests in various programming languages*.
 
 You have a program that is supposed to do something on a regular schedule, and you want to monitor that scheduled execution with WDT.io. 
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
-2. [Create](inbound_timer.html) a new inbound timer.
-3. Copy the URL of this new timer.
-4. In the part of your program that is supposed to run regularly, send a kick to the URL copied from step 3.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
+2. [Create](inbound_timer.html) a new inbound timer
+3. Copy the URL of this new timer
+4. In the part of your program that is supposed to run regularly, send a kick to the URL copied from step 3
 
 Now every time that part of your program runs, it'll send a kick to WDT.io. This regular kick prevents WDT.io from sending an alert to you. If, for whatever reason the part fails or doesn't get invoked, WDT.io won't get the kick and will send you an alert.
 

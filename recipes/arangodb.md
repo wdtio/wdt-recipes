@@ -6,10 +6,10 @@
 ---
 ArangoDB is a multi-model NoSQL database. We can use WDT.io to be notified when it stops.
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
-2. [Create](inbound_timer.html) a new inbound timer.
-3. Copy the URL of this new timer.
-4. Add the foxx-heartbeat app to ArangoDB and configure it with the timer URL.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
+2. [Create](inbound_timer.html) a new inbound timer
+3. Copy the URL of this new timer
+4. Add the foxx-heartbeat app to ArangoDB and configure it with the timer URL
 
 ```bash
 foxx-manager update

@@ -24,9 +24,9 @@ df -l / | tail -1 | awk '{ print int($5) }'
 
 Let's decide that we want to monitor every 5 minutes and that the maximum used disk space we allow is 90%. 
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
-2. [Create](inbound_timer.html) a new inbound timer "diskspace" with a schedule of every 5 minutes +1 minute tolerance.
-3. Copy the URL of this new timer.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
+2. [Create](inbound_timer.html) a new inbound timer "diskspace" with a schedule of every 5 minutes +1 minute tolerance
+3. Copy the URL of this new timer
 4. Edit the crontab and add this line:
 
 ```bash

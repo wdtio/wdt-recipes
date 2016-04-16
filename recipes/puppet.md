@@ -7,10 +7,10 @@
 Puppet is an open-source declarative configuration management system.  It comes with a built-in type to manage cron jobs.
 We can use WDT.io to extend these puppet cron jobs and receive notification when a scheduled job fails to run.
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
-2. [Create](inbound_timer.html) a new inbound timer.
-3. Copy the URL of this new timer.
-4. Extend the job to send a kick to the URL copied from step 3.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
+2. [Create](inbound_timer.html) a new inbound timer
+3. Copy the URL of this new timer
+4. Extend the job to send a kick to the URL copied from step 3
 
 Now every time cron runs your job, it'll also send a kick to WDT.io. This regular kick prevents WDT.io from sending an alert to you. If, for whatever reason the job fails or does not run (perhaps your system has run out of space), WDT.io won't get the kick and will send an alert.
 

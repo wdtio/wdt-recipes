@@ -8,9 +8,9 @@ WordPress is a free and open-source web content management system based on PHP a
 However, wp_cron is solely invoked when your website receives a visitor.  
 With WDT.io, you can now ping your website on regular intervals and induce the wp_cron to run on a more regular basis.
 
-1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already.
+1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
 2. [Create](outbound_timer.html) a new outbound timer
-3. In the URL field, paste the URL of your WordPress site, specify a frequency and alert email.
+3. In the URL field, paste the URL of your WordPress site, specify a frequency and alert email
 
 Now, WDT.io will send an outbound kick and dispatch an alert when the WordPress frontend is not responding. It'll also ensure your wp_cron job runs as often as intended.
 
