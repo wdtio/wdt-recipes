@@ -1,7 +1,8 @@
 {
   "title": "Recipes",
   "shortTitle": "Monitoring everything",
-  "date": "2015-06-26"
+  "date": "2015-06-26",
+  "indexClass": "index"
 }
 ---
 
