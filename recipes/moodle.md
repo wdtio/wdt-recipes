@@ -7,9 +7,9 @@
 Moodle is a free and open-source learning management system based on pedagogical principles.  Moodle is widely used for distance education and other e-learning initiatives.
 
 Moodle has a built in cron process that should be run periodically.  The script runs different internal management tasks at different intervals.
-If the cron is not running regularly, reports, emails, activity completions and other internal functionalities will not be recent.
+If the cron is not running regularly, reports, emails, activity completions, and other internal functionalities will not be recent.
 
-With wdt.io, you can now monitor that this cron is running and receive alerts when the tasks are not completely sucessfully.
+With WDT.io, you can now monitor that this cron is running and receive alerts when the tasks are not completely sucessfully.
 
 1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
 2. [Create](inbound_timer.html) a new inbound timer
