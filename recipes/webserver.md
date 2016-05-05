@@ -15,9 +15,12 @@ Apache and nginx are two popular webservers. We can use WDT.io to be notified wh
 
 Now WDT.io will send a regular kick to your webserver (an HTTP HEAD request to keep the load low). If the webserver fails to respond, WDT.io will send an alert.
 
+If your webserver does not support HEAD requests, you can change it to a GET request. Also, if you like you can monitor specific pages by entering the full URL for that page.
 
 ### Example
 
-We are the webmaster of example.io. We set up an outbound timer named **example.io**, enter **http://example.io** as URL and pick **every 1 minute** as schedule.
+We are the webmaster of qq.com. We set up an outbound timer named **qq**, enter **http://qq.com** as URL and pick **every 1 minute** as schedule.
 
-Now we'll be notified when example.io is offline and can fix whatever caused the problem (maybe our DNS provider is down).
+<video width="420" src="https://s3-us-west-2.amazonaws.com/docs.wdt.io/website-monitor.mp4" controls muted></video>
+
+Now we'll be notified when qq.com is offline and can fix whatever caused the problem (maybe our DNS provider is down).
