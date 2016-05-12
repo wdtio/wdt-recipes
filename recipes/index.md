@@ -18,6 +18,7 @@
 - [How to monitor IronMQ, IronWorker, and IronCache](iron_io.html)
 - [How to monitor launchd](launchd.html)
 - [How to monitor logrotate](logrotate.html)
+- [How to monitor memory](memory.html)
 - [How to monitor Moodle cron](moodle.html)
 - [How to monitor Node Schedule](node_schedule.html)
 - [How to monitor Time Machine](time_machine.html)
