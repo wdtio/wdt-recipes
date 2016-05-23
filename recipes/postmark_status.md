@@ -4,7 +4,7 @@
   "date": "2016-05-20"
 }
 ---
-[Postmark](https://postmarkapp.com), is a transactional-email service provider and has a new API for querying their current status. Let's use WDT.io to get alerted in case the API reports any problem. The endpoint we're interested in is at `https://status.postmarkapp.com/api/1.0/status` which returns a response in JSON format that looks like this:
+[Postmark](https://postmarkapp.com) is a transactional-email service provider and has a new API for querying their current status. Let's use WDT.io to get alerted in case the API reports any problem. The endpoint we're interested in is at `https://status.postmarkapp.com/api/1.0/status` which returns a response in JSON format that looks like this:
 
 ```JavaScript
 {"status":"UP","lastCheckDate":"2016-05-20T20:30:29Z"}
