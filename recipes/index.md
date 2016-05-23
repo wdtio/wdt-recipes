@@ -22,6 +22,7 @@
 - [How to monitor memory](memory.html)
 - [How to monitor Moodle cron](moodle.html)
 - [How to monitor Node Schedule](node_schedule.html)
+- [How to monitor Postmark](postmark_status.html)
 - [How to monitor Time Machine](time_machine.html)
 - [How to monitor Travis](travis_github.html)
 - [How to monitor webservers](webserver.html)
