@@ -4,13 +4,13 @@
   "date": "2016-05-20"
 }
 ---
-[Postmark](https://postmarkapp.com), an transactional-email service provider, has a new API for quering their current status. Let's use WDT.io to get alerted in case the API reports any problem. The endpoint we're interested in is at `https://status.postmarkapp.com/api/1.0/status` which return a response in JSON format that looks like this:
+[Postmark](https://postmarkapp.com), is a transactional-email service provider and has a new API for querying their current status. Let's use WDT.io to get alerted in case the API reports any problem. The endpoint we're interested in is at `https://status.postmarkapp.com/api/1.0/status` which returns a response in JSON format that looks like this:
 
 ```JavaScript
 {"status":"UP","lastCheckDate":"2016-05-20T20:30:29Z"}
 ```
 
-We can create a cronjob that queries the api on a regular basis. Them we parse the JSON and test that the value for "status" is "UP". When it's "UP", we kick an inbound watchdog timer on WDT.io to prevent it from alerting us.
+We can create a cronjob that queries the api on a regular basis. Then we parse the JSON and test that the value for "status" is "UP". When it's "UP", we kick an inbound watchdog timer on WDT.io to prevent it from alerting us.
 
 An easy way to parse JSON from the shell is jq. `jq -r .status` returns the value for "status" in raw format so that we can easily test it. Putting it together, this will return either UP, MAINTENANCE, DEGRADED, DELAY, or DOWN:
 
