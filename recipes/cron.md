@@ -1,7 +1,7 @@
 {
   "title": "How to monitor cron jobs",
   "shortTitle": "Monitoring cron",
-  "date": "2015-06-26"
+  "date": "2016-05-31"
 }
 ---
 Cron is a time-based job scheduler in Unix-like systems. We can use WDT.io to be notified when a job failed.
@@ -16,18 +16,21 @@ Now every time cron runs your job, it'll also send a kick to WDT.io. This regula
 
 ### Example
 
-We have the following cron tab on our database server:
+We have the following cron tab on our server:
 
 ```bash
-0 20 * * * /home/oracle/scripts/export_dump.sh
+*/5 * * * * /root/backup.sh
 ```
-Every day at 20:00 the export_dump.sh script is executed. It typically finishes in under a minute, but as long as it completes in two minutes, we're OK.
+Every 5 minutes the backup.sh script is executed. It typically finishes in 10 seconds, but as long as it completes in half a minute, we're OK.
 
-So we name our new inbound timer **db/export**, set the schedule to **every 1 day** and the precision to **2 minutes**. The URL for this new timer will look something like **k.wdt.io/123abc/db/export**. With that, we edit the crontab using `crontab -e` and change our entry to:
+So we name our new inbound timer **backup**, set the schedule unit to **cron**, the cron schedule to **\*/5 \* \* \* \*** and the precision to **.5 minute**. The URL for this new timer will look something like **k.wdt.io/123abc/backup**. With that, we edit the crontab using `crontab -e` and change our entry to:
 
 ```bash
-0 20 * * * /home/oracle/scripts/export_dump.sh && curl -sm 30 k.wdt.io/123abc/db/export
+*/5 * * * * /root/backup.sh && curl -sm 30 k.wdt.io/123abc/backup
 ```
+
+<video width="420" src="https://s3-us-west-2.amazonaws.com/docs.wdt.io/cron-monitor.mp4" controls muted></video>
+
 Now we'll be notified when the job fails and can fix whatever caused the problem (maybe we ran out of diskspace).
 
 ### More info
