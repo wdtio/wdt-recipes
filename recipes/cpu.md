@@ -10,7 +10,7 @@ When a server utilizes it processor's cores to the maximum, it doesn't have enou
 
 The general idea is to create a cron job that compares the average CPU usage over some time to a maximum value. The cron job then kicks a watchdog timer if the usage is below the maximum. Now if the usage is above that maximum, WDT.io won't get kicked and sends out an alert.
 
-**top** is a standard unix command that displays processes and the resources used. Used with the options `-bn 2 -d 1` it operates in batch mode (instead of being interactive), twice, and with a delay of one second. Piping the output through `grep '^%Cpu'` will capture just the two lines about total CPU utilization. The first line is the average since reboot, and the second line is the average during the one second we're letting `top` run. We can use `tail -n 1` to capure that second line, which will look something like the following.
+**top** is a standard unix command that displays processes and the resources used. Used with the options `-bn 2 -d 1` it operates in batch mode (instead of being interactive), twice, and with a delay of one second. Piping the output through `grep '^%Cpu'` will capture just the two lines about total CPU utilization. The first line is the average since reboot, and the second line is the average during the one second we're letting `top` run. We can use `tail -n 1` to capture that second line, which will look something like the following.
 
 ```bash
 %Cpu(s):  3.8 us,  0.6 sy,  0.0 ni, 94.2 id,  0.2 wa,  0.0 hi,  0.2 si,  1.0 st
