@@ -19,7 +19,7 @@ The general idea is to create a cron job that compares the average CPU usage ove
 The values we're most interested in are **us** (CPU time spent in user space), **sy** (CPU time spent in kernel space), and **ni** (CPU time spent on low priority processes). We can add them up and floor the result into a comparable integer with `awk '{print int($2+$4+$6)}'`. All together we have
 
 ```bash
-top -bn 2 -d 0.01 | grep '^%Cpu' | tail -n 1 | awk '{print int($2+$4+$6)}'
+top -bn 2 -d 1 | grep '^%Cpu' | tail -n 1 | awk '{print int($2+$4+$6)}'
 ```
 
 Let's decide that we want to monitor every 2 minutes and that the maximum CPU usage is 80%. 
