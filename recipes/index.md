@@ -23,6 +23,7 @@
 - [How to monitor Postmark](postmark_status.html)
 - [How to monitor Time Machine](time_machine.html)
 - [How to monitor Travis](travis_github.html)
+- [How to monitor VMs for noisy neighbors](noisy_neighbor.html)
 - [How to monitor webservers](webserver.html)
 - [How to monitor Windows batch script](windows_batch_script.html)
 - [How to monitor Windows PowerShell](powershell.html)
