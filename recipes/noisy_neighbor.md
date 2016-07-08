@@ -6,7 +6,7 @@
 ---
 In shared virtual environments like a cloud, noisy neighbors can negatively impact the performance of your applications. A neighbor is a virtual machine sharing the same resources as you, owned by someone else (another tenant). "Noise" can be in the form of stolen cpu cycles and saturated disk I/O.
 
-Disk I/O can be saturated by an individual tenant forcing other tenants to wait for their turn and stealing of cpu cycles. If your application depends on reading or writing to disk, this I/O wait can essentially stall it.
+Disk I/O can become saturated or cpu cycles stolen by an individual tenant forcing other tenants to wait for their turn in the processing queue. If your application depends on reading or writing to disk, this I/O wait can essentially stall it.
 
 One possible reason for cpu being stolen is if the IaaS provider oversold the physical server and the VMs on that server are competing for the cpu. If your application needs to be fast and is cpu bound, stolen cpu cycles will impact your performance.
 
@@ -27,7 +27,7 @@ The second to last line is the average since boot, and the last line is the aver
 vmstat 1 2 | tail -1 | awk '{exit ($(NF-1) <= WA_MAX && $(NF) <= ST_MAX) ? 0 : 1}'
 ```
 
-Let's decide that we want to monitor every 2 minutes, that the maximum I/O wait is 50%, and the maximum cpu steal is 20%.
+Let's decide that we want to monitor every 2 minutes, that the maximum I/O wait is 60%, and the maximum cpu steal is 20%.
 
 1. [Sign up](https://wdt.io/signup) on WDT.io if you haven't already
 2. [Create](inbound_timer.html) a new inbound timer "noisy-neighbor" with a schedule of every 2 minutes +30 seconds tolerance
@@ -35,7 +35,7 @@ Let's decide that we want to monitor every 2 minutes, that the maximum I/O wait 
 4. Edit the crontab and add this line:
 
 ```bash
-*/2 * * * * vmstat 1 2 | tail -1 | awk '{exit ($(NF-1) <= 50 && $(NF) <= 20) ? 0 : 1}' && curl -sm 30 <the URL from step 3>
+*/2 * * * * vmstat 1 2 | tail -1 | awk '{exit ($(NF-1) <= 60 && $(NF) <= 20) ? 0 : 1}' && curl -sm 30 <the URL from step 3>
 ```
 
 Now we'll be notified when the neighbors are too noisy (or the cronjob fails) and can contact support or move our application to another VM. If the noise is so bad that our cron job fails to start on time, we'll get alerted as well which shows the advantage of passive inbound monitoring over active monitoring.
