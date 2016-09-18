@@ -4,7 +4,7 @@
   "date": "2016-09-14"
 }
 ---
-DNS is a necessary pillar for functional domain name resolution from IP address to domain names.
+DNS is a necessary pillar for functional domain name resolution from IP addresses to domain names.
 Unexpected changes to your domain name records can lead to surprising and often negative results.
 Periodically verifying these records manually can be a long and tedious task.
 
