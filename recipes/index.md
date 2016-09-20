@@ -14,6 +14,7 @@
 - [How to monitor CircleCI](circleci_github.html)
 - [How to monitor cron jobs](cron.html)
 - [How to monitor cron jobs created with Puppet](puppet.html)
+- [How to monitor DNS](dns.html)
 - [How to monitor Heroku Scheduler](heroku_scheduler.html)
 - [How to monitor IP addresses](ip_address.html)
 - [How to monitor IronMQ, IronWorker, and IronCache](iron_io.html)
