@@ -43,6 +43,7 @@ _____
 - [How to create an outbound timer](outbound_timer.html)
 - [How to create an on-demand timer](ondemand_timer.html)
 - [How to integrate WDT.io with Flowdock, HipChat, PagerDuty, and Slack](email_integrations.html)
+- [How to build a dead man's switch with the AWS IoT Button](aws_iot.html)
 
 ### Need another recipe?
 Please get in touch and let us know.
