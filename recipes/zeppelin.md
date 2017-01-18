@@ -32,7 +32,7 @@ Every 5 minutes, the Note will run.  But what if it runs and fails, or fails to 
 So we create a new inbound time **zep-note1**, set the schedule to **every 5 minutes** and the precision to **2 minutes**.  The URL for this new timer will look something like **k.wdt.io/123abc/zep-note1**.  With that, we edit the Zeppelin Note and add a shell paragraph (%sh):
 ```bash
 %sh
-k.wdt.io/123abc/zep-note1
+curl k.wdt.io/123abc/zep-note1
 ```
 
 Now we'll be notified when the Zeppelin Note does not complete successfully and in a timely manner.
