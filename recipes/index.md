@@ -32,6 +32,7 @@
 - [How to monitor WordPress & wp_cron](wp_cron.html)
 - [How to monitor your own programs](programmatic_kicks.html)
 - [How to monitor Zabbix frontends](zabbix_frontend.html)
+- [How to monitor Zeppelin scheduled tasks](zeppelin.html)
 _____
 
 - [How to monitor cpu](cpu.html)

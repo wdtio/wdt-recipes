@@ -1,5 +1,5 @@
 {
-  "title": "How to monitor Zeppelin schedule tasks",
+  "title": "How to monitor Zeppelin scheduled tasks",
   "shortTitle": "Monitoring Zeppelin tasks",
   "date": "2017-01-18"
 }
@@ -27,7 +27,7 @@ Let us add a schedule for this notebook to execute it every 5 minutes.
 curl -X POST -H "Content-Type: application/json" -d '{"cron": "0 0/5 * * * ?"}' http://zeppelin-url:zeppelin-port/api/notebook/cron/MYNOTEBOO
 ```
 
-Every 5 minutes, the Notebook will run.  But what if it runs and fails, or fails to run?  This is where WDT.io monitoring comes into play. 
+Every 5 minutes, the Notebook will run.  But what if it runs and fails, or fails to run?  This is where WDT.io monitoring comes into play.
 
 So we create a new inbound time **zep-note1**, set the schedule to **every 5 minutes** and the precision to **2 minutes**.  The URL for this new timer will look something like **k.wdt.io/123abc/zep-note1**.  With that, we edit the Zeppelin Notebook and add a shell paragraph (%sh):
 ```bash
